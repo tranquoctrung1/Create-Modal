@@ -1,0 +1,46 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    position: relative;
+}
+
+.Modal
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfe6e9;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.Modal .container
+{
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid green;
+    background: #636e72;
+    display: none;
+    animation-name: animation;
+    animation-duration: 2s;
+}
+
+.Modal.active
+{
+    z-index: 1;
+}
+
+.Modal.active .container
+{
+    display: block;
+}
+
+@keyframes animation 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
